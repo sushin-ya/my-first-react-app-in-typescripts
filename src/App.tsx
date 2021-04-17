@@ -1,7 +1,21 @@
 import React from 'react';
+import CounterUseReducer from './CounterUseReducer';
 
-const App = () => {
-  return <div>React Starter Kit in TypeScript</div>;
+interface AppProps {
+  message?: string;
+}
+
+const App: React.FunctionComponent<AppProps> = ({ message }) => {
+  return (
+    <div>
+      <CounterUseReducer />
+    </div>
+  );
+};
+
+App.defaultProps = {
+  message: 'Hello, defaultProps!',
+  // description: 'This is App component',
 };
 
 export default App;
